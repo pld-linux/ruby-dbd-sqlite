@@ -6,8 +6,10 @@ License:	Ruby License
 Group:		Development/Libraries
 Source0:	http://rubyforge.org/frs/download.php/44093/dbd-sqlite-%{version}.tar.gz
 # Source0-md5:	ac72f75c3feedf5461b23d1da05f2b2a
-Requires:	ruby-sqlite
 URL:		http://rubyforge.org/projects/ruby-dbi/
+BuildRequires:	ruby-modules
+Requires:	ruby-sqlite
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 Ruby Database driver for Sqlite.
